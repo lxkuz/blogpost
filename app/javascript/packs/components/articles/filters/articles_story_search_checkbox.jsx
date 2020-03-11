@@ -2,8 +2,7 @@ import React from 'react'
 import { observer } from 'mobx-react'
 import articlesStore from '../../../stores/articles_store';
 
-const ArticlesStorySearchCheckbox = observer(() => (
-  <label>
+const ArticlesStorySearchCheckbox = observer(() => <label>
     Stories search:
     <input
       name="story"
@@ -11,7 +10,6 @@ const ArticlesStorySearchCheckbox = observer(() => (
       checked={articlesStore.filters.stories}
       onChange={ ev => articlesStore.setFilter('stories', ev.target.checked) }
     />
-  </label>
-))
+  </label>)
 
 export default ArticlesStorySearchCheckbox
